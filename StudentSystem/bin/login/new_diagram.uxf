@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>100</y>
+      <w>570</w>
+      <h>530</h>
+    </coordinates>
+    <panel_attributes>login::Login
+--
++btnLogin, btnCancel: JButton
++jpn, jpc, jps: JPanel
++lblTitle, lblType, lblName, lblPassword: JLabel
++jtfName: JTextField
++jtfpassword: JPasswordField
++comboBox: JComboBox&lt;String&gt;
+~user_name: String
+~password: String
+~adm_name: String
+~aid: String
+~stu_name: String
+~sid: String
+~stu_password: String
+~tea_name: String
+~tid: String
+~tea_password: String
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++Login(): ctor
++main(String[] args): void
++admin_login(): void
++stu_login(): void
++tea_login(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

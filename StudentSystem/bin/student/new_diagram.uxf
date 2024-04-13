@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>440</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>student::changePwd
+--
++age: int
++sname, spassword, sex, sclass: String
++btnChange, btnCancel: JButton
++lblOldPwd, lblNewPwd, lblPwd: JLabel
++jp1, jp2, jp3, jp4: JPanel
++oldPwdField: JTextField
++newPwdField, okPwdField: JPasswordField
++jtable1, jtable2: JTable
+~sid1: String
+~old_password: String
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++changePwd(String sname, String sid): ctor
++change_password(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>40</y>
+      <w>490</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>student::queryGrade
+--
++chinese, math, english, physics, chemistry, biology, history, geography, politics: int
++age, stuId, stuName, spassword, sex, sclass: String
++btnQueryGrade, btnQueryMess, btnBack, btnExit: JButton
++lblName, lblName1, lblSid, lblSid1: JLabel
++jp1, jp2, jp3, jtp1, jp4, jtp2, jp5: JPanel
++jtable1, jtable2: JTable
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++queryGrade(String sname, String sid): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>400</y>
+      <w>380</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>student::Student
+--
++age: int
++sid, sname, spassword, sex, sclass: String
++toolBar: JToolBar
++btnQueryGrade, btnChangePwd: JButton
++lblTitle, lblTip1, lblTip2, lblTip3: JLabel
++jpn, jpn1, jpc: JPanel
++jtable: JTable
+--
++Student(String sname, String sid, String spassword): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

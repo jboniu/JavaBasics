@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>320</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>admin::Admin
+--
++age: int
++sid, sname, spassword, sex, sclass: String
++toolBar: JToolBar
++btnOK, btnCancel: JButton
++lblTitle, lblTip, lblType, lblWay: JLabel
++jp1, jp2, jp3, jp4, jp5: JPanel
++comboBox1, comboBox2: JComboBox&lt;String&gt;
++jtable: JTable
+--
++Admin(String aname): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>50</y>
+      <w>660</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>admin::AllQue
+--
++btnCancel, btnQueryStu, btnQueryTea, btnQueryCou, btnQueryGrade: JButton
++lblSid, lblTid, lblCid, lblSid1, lblCid1: JLabel
++jtfSid, jtfTid, jtfCid, jtfSid1, jtfCid1: JTextField
++jp1, jp2, jp3, jp4, jp5, jp6, jp7, jp8, jp9, jp10, jp11, jp12: JPanel
++tableStu, tableTea, tableCou, tableGra: JTable
++modelStu, modelTea, modelCou, modelGra: DefaultTableModel
++jspStu, jspTea, jspCou, jspGra: JScrollPane
++titleStu[] = { "学号", "姓名", "密码", "性别", "班级", "年龄" }: String
++titleTea[] = { "教师号", "姓名", "密码", "年龄", "性别" }: String
++titleCou[] = { "课程号", "课程名", "教师号", "学习人数" }: String
++titleGra[] = { "学号", "课程号", "成绩" }: String
+~stuId, stuName, spassword, ssex, sclass: String
+~sage: int
+~teaId, teaName, tpassword, tsex: String
+~tage: int
+~couId, couName, couTid: String
+~couCredit: int
+~graSid, graCid: String
+~graGrade: int
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++AllQue(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>80</y>
+      <w>490</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>admin::StuAdd
+--
++btnAdd, btnCancel: JButton
++jp1, jp2, jp3, jp4, jp5, jp6, jp7: JPanel
++lblSid, lblName, lblPwd, lblSex, lblClass, lblAge: JLabel
++jtfSid, jtfName, jtfPwd, jtfSex, jtfClass, jtfAge: JTextField
++jtfpassword: JPasswordField
++comboBox: JComboBox&lt;String&gt;
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++StuAdd(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1110</x>
+      <y>460</y>
+      <w>390</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>admin::TeaAdd
+--
++btnAdd, btnCancel: JButton
++jp1, jp2, jp3, jp4, jp5, jp6: JPanel
++lblTid, lblName, lblPwd, lblAge, lblSex: JLabel
++jtfTid, jtfName, jtfPwd, jtfAge, jtfSex: JTextField
++jtfpassword: JPasswordField
++comboBox: JComboBox&lt;String&gt;
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++TeaAdd(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>530</y>
+      <w>390</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>admin::StuUpd
+--
++lblSid, lblTip, lblUpd: JLabel
++jtfSid, jtfUpd: JTextField
++jp1, jp2, jp3, jp4: JPanel
++btnUdp, btnCancel: JButton
++comboBox: JComboBox&lt;String&gt;
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++StuUpd(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>550</y>
+      <w>460</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>admin::TeaUpd
+--
++lblTid, lblTip, lblUpd: JLabel
++jtfTid, jtfUpd: JTextField
++jp1, jp2, jp3, jp4: JPanel
++btnUdp, btnCancel: JButton
++comboBox: JComboBox&lt;String&gt;
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++TeaUpd(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1140</x>
+      <y>840</y>
+      <w>380</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>admin::StuDel
+--
++lblId: JLabel
++jtfId: JTextField
++btnDel, btnCancel: JButton
++jp1, jp2: JPanel
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++StuDel(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>830</y>
+      <w>440</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>admin::TeaDel
+--
++lblId: JLabel
++jtfId: JTextField
++btnDel, btnCancel: JButton
++jp1, jp2: JPanel
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++TeaDel(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

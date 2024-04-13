@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>10</y>
+      <w>500</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>teacher::TchangeGrade
+--
++lblTip, lblSid, lblCid, lblChange: JLabel
++jtfSid, jtfCid, jtfChange: JTextField
++tableGrade: JTable
++modelGra: DefaultTableModel
++jspGra: JScrollPane
++jp1, jp2, jp3, jp4, jp5, jp6: JPanel
++titleGra[] = { "学号", "学生名", "课程号", "课程名", "教师名", "学生成绩" }: String
++btnOK, btnChange, btnCancel: JButton
+~stuId, stuName: String
+~couId, couName: String
+~graGrade: int
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++TchangeGrade(String tname, String tid): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>10</y>
+      <w>420</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>teacher::TchangePwd
+--
++lblOldPwd, lblNewPwd, lblPwd: JLabel
++jp1, jp2, jp3, jp4: JPanel
++oldPwdField: JTextField
++newPwdField, okPwdField: JPasswordField
++btnChange, btnCancel: JButton
++jtable1: JTable
++teaId, teaName, teaPwd, teaSex: String
++teaAge: int
+~tid1: String
+~old_password: String
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++TchangePwd(String tname, String tid): ctor
++change_password(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>400</y>
+      <w>500</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>teacher::TqueryMess
+--
++lblName, lblName1, lblTid, lblTid1: JLabel
++jp1, jp2, jp3, jp4: JPanel
++btnQueryMess: JButton
++jtable1: JTable
++teaId, teaName, teaPwd, teaSex: String
++teaAge: int
+~driverName = "com.mysql.cj.jdbc.Driver": String
+~dbURL = "jdbc:mysql://localhost:3306/javaclassdesign?serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8": String
+~userName = "root": String
+~userPwd = "password": String
+~ct = null: Connection
+~ps = null: PreparedStatement
+~rs = null: ResultSet
+--
++TqueryMess(String tname, String tid): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>420</y>
+      <w>390</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>teacher::Teacher
+--
++age: int
++sid, sname, spassword, sex, sclass: String
++toolBar: JToolBar
++btnQueryMess, btnChangePwd, btnChangeGrade: JButton
++lblTitle, lblTip, lblType, lblWay: JLabel
++jp1, jp2, jp3, jp4, jp5: JPanel
++comboBox1, comboBox2: JComboBox&lt;String&gt;
++jtable: JTable
+--
++Teacher(String tname, String tid): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
